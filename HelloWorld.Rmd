@@ -20,3 +20,13 @@ cereal <- read_csv("./cereal.csv")
 weather <- read_csv("./weather.csv")
 ```
 
+```{r}
+ggplot(data = cereal, aes(cereal$sugars, cereal$rating)) + geom_point()
+
+hist(beaches$temperature)
+
+ggplot(data = cereal, aes(cereal$protein, cereal$rating)) + geom_point() + geom_smooth(aes(x = cereal$protein, y = cereal$rating))
+
+```
+
+
