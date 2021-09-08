@@ -28,5 +28,30 @@ hist(beaches$temperature)
 ggplot(data = cereal, aes(cereal$protein, cereal$rating)) + geom_point() + geom_smooth(aes(x = cereal$protein, y = cereal$rating))
 
 ```
+```{r}
+ggplot(
+  data = beaches,
+  mapping = aes(
+    x = temperature, 
+    y = rainfall
+  ) 
+) + 
+geom_point(
+  mapping = aes(colour = season_name), 
+  size = 2
+) + 
+geom_rug() + 
+facet_wrap(vars(season_name))
+```
+```{r}
+ggplot(data = cereal) +
+  aes(x = mfr, y = as.integer(sugars)) +
+  geom_bar(stat = "identity", alpha = 0.8) +
+  labs(title = "Sugars per Manufacturer",
+       y = "Average Sugars",
+       x = "Manufacturer") +
+  theme_minimal()
+
+```
 
 
