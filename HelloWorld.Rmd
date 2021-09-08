@@ -4,3 +4,10 @@ output: html_document
 ---
  "I'm Learning to Use Github...Boom"
 
+```{r}
+library(ggplot2)
+
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()
+```
+
