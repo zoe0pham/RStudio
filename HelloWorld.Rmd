@@ -11,3 +11,12 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
   geom_point()
 ```
 
+```{r}
+library(tidyverse)
+beaches <- read_csv("./beaches.csv")
+
+cereal <- read_csv("./cereal.csv")
+
+weather <- read_csv("./weather.csv")
+```
+
